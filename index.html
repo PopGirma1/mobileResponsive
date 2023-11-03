@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> nav </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(200, 202, 166);
+            height: 100px;
+            padding: 0 40px;
+            line-height: 100px;
+
+        }
+
+        li {
+            display: inline-block;
+            list-style: none;
+            margin: 0 10px;
+
+        }
+
+        a {
+            min-width: 300px;
+            text-decoration: none;
+            background-color: rgb(203, 203, 199);
+            padding: 10px 40px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            color: black
+        }
+
+        a:hover {
+            background-color: rgb(196, 197, 180);
+        }
+
+        form {
+            background-color: rgb(196, 197, 180);
+            display: flex;
+            gap: 10px;
+            line-height: 50px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            margin: 20px 0px;
+            padding: 0px 10px;
+        }
+
+        input {
+            outline: none;
+            height: 50px;
+            width: 250px;
+            border-radius: 12px;
+            background-color: transparent;
+            font-size: 20px;
+            border: none;
+
+        }
+
+        form label {
+            font-size: 30px;
+            color: rgb(239, 235, 235);
+        }
+
+        .logo {
+            font-size: 28px;
+            color: rgb(239, 234, 234);
+        }
+
+        .menu {
+            font-size: 32px;
+            color: white;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+
+        div {
+            min-height: 100vh;
+            background-color: rgb(189, 208, 224);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        @media (max-width:960px) {
+            nav {
+                padding: 0px;
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+            }
+
+            .logo {
+                margin-left: 50px;
+            }
+
+            .menu {
+                display: block;
+                margin-right: 50px;
+            }
+
+            form input {
+                width: 120px;
+            }
+
+            a {
+                min-width: 200px;
+            }
+
+            ul {
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                margin-top: 100px;
+                background-color: aliceblue;
+                height: 70vh;
+                width: 100%;
+                align-items: center;
+                transition: all .5s;
+                margin-left: 0;
+                z-index: 100;
+                position: fixed;
+
+            }
+
+            #check:checked~ul {
+                margin-left: -101%;
+            }
+        }
+
+        @media (max-width:363px) {
+            form {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label class="logo">
+            Logo
+        </label>
+        <form>
+            <input placeholder="Search..." type="text">
+            <label class="search_icon">
+                <i class="fa fa-search"></i>
+            </label>
+        </form>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+
+            <li>
+                <a href="#">Service</a>
+            </li>
+
+            <li>
+                <a href="#">About</a>
+            </li>
+
+        </ul>
+        <label class="menu" for="check">
+            <i class="fa fa-bars"></i>
+        </label>
+    </nav>
+
+    <div>
+        <p> This is the main Section </p>
+    </div>
+    
+</body>
+
+</html>
