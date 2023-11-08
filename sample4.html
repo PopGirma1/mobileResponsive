@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive web page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        nav {
+            background-color: rgb(152, 158, 163);
+            height: 110px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            position: fixed;
+            align-items: center;
+        }
+
+        .logo,
+        .menu {
+            color: white;
+            font-size: 31px;
+        }
+
+        .logo {
+            margin-left: 50px;
+        }
+
+        .menu {
+            margin-right: 50px;
+        }
+
+        #menu {
+            display: none;
+        }
+
+        ul {
+            top: 0%;
+            left: 0%;
+            width: 300px;
+            height: 100vh;
+            background-color: rgb(180, 189, 197);
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            transition: all .5s;
+        }
+
+        .links {
+            list-style: none;
+            background-color: rgb(147, 151, 154);
+            min-width: 200px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        a {
+            text-transform: uppercase;
+        }
+
+        .links:hover {
+            background-color: rgb(148, 157, 164);
+        }
+
+        #menu:checked~ul {
+            margin-left: -100%;
+        }
+
+        div {
+            background-color: rgb(198, 217, 234);
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        input[type="text"] {
+            outline: none;
+            border: none;
+            background-color: transparent;
+            height: 50px;
+        }
+
+
+        .search {
+            list-style: none;
+        }
+
+        form {
+            background-color: rgb(198, 217, 234);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            border-radius: 12px;
+            margin-bottom: 130px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="menu">
+    <nav>
+        <label class="logo">
+            Logo
+        </label>
+        <label class="menu" for="menu">
+            <i class="fa fa-fw fa-bars"></i>
+        </label>
+    </nav>
+
+    <ul>
+
+        <li class="search">
+            <form>
+                <input type="text" placeholder="search...">
+                <i class="fa fa-fw fa-search"></i>
+            </form>
+        </li>
+
+        <li class="links">
+            <a>
+                Home
+            </a>
+        </li>
+        <li class="links">
+            <a>
+                Service
+            </a>
+        </li>
+        <li class="links">
+            <a>
+                Contact
+            </a>
+        </li>
+        <li class="links">
+            <a>
+                About
+            </a>
+        </li>
+
+    </ul>
+
+    <div>
+        <p>
+            this is the main content
+        </p>
+
+        <p>
+            this is the main content
+        </p>
+
+        <p>
+            this is the main content
+        </p>
+
+        <p>
+            this is the main content
+        </p>
+    </div>
+</body>
+
+</html>
